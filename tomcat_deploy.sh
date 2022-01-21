@@ -77,6 +77,10 @@ chown -R $tomcat_username:$tomcat_username $CATALINA_HOME
 mkdir -p $tomcat_instance_dir
 mkdir -p $tomcat_instance_dir/logs
 mkdir -p $tomcat_instance_dir/conf
+
+# copy default server.xml
+cp $CATALINA_HOME/conf/server.xml $tomcat_instance_dir/conf/server.xml
+
 #grant rights on instance dir
 chown -R $tomcat_username:$tomcat_username $tomcat_instance_dir
 
